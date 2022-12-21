@@ -22,9 +22,9 @@ Most of the instructions on this page are from the parent repository. I am only 
 
 - install dependencies::
     brew install sqlcipher
-- Export library path:
+- Export library path::
   export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
-- Build and install:
+- Build and install::
   python3 setup.py install
 
 Usage
