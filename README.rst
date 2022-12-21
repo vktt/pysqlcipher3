@@ -16,6 +16,17 @@ Packaging for SQLCipher (c) 2013-2014 Kali Kaneko
 
 Python 3 packaging for SQLCipher (c) 2015 David Riggleman
 
+Building for M1 Macs
+-----
+Most of the instructions on this page are from the parent repository. I am only adding small details for how to build this on a Mac with Apple ARM64 (M1/M2 etc.) processors.
+
+- install dependencies::
+    brew install sqlcipher
+- Export library path:
+  export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+- Build and install:
+  python3 setup.py install
+
 Usage
 -----
 You have to pass the ``PRAGMA key`` before doing any operations::
@@ -43,7 +54,8 @@ This is the default install option. For production use, you should build
 against ``libsqlcipher``, which must be installed on your system prior to 
 installation. Consult your operating system documentation for how to 
 install SQL Cipher. You can also manually build SQL Cipher by cloning 
-https://github.com/sqlcipher/sqlcipher and following the build instructions.
+https://github.com/sqlcipher/sqlcipher and following the build instructions::
+
 
 Build against amalgamation
 --------------------------
